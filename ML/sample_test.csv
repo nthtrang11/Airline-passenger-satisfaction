@@ -1,0 +1,21 @@
+Gender,Customer Type,Age,Type of Travel,Class,Flight Distance,Inflight wifi service,Departure/Arrival time convenient,Ease of Online booking,Gate location,Food and drink,Online boarding,Seat comfort,Inflight entertainment,On-board service,Leg room service,Baggage handling,Checkin service,Inflight service,Cleanliness,Departure Delay in Minutes,Arrival Delay in Minutes
+Male,Loyal Customer,35,Business travel,Business,1200,5,5,5,4,5,5,5,5,5,4,5,5,5,5,0,0
+Female,disloyal Customer,28,Personal Travel,Eco,450,2,2,2,2,2,2,2,1,2,2,2,2,2,2,15,20
+Male,Loyal Customer,42,Business travel,Business,2500,4,5,4,5,4,5,5,4,5,5,4,5,5,4,0,0
+Female,Loyal Customer,55,Personal Travel,Eco Plus,800,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,7
+Male,disloyal Customer,22,Personal Travel,Eco,300,1,1,2,1,1,1,2,1,1,1,2,1,1,1,45,50
+Female,Loyal Customer,38,Business travel,Business,1800,5,4,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,50,Business travel,Business,3000,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,disloyal Customer,31,Personal Travel,Eco,600,2,3,2,2,2,2,3,2,2,2,2,2,2,2,10,12
+Male,Loyal Customer,45,Business travel,Eco Plus,1500,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0
+Female,Loyal Customer,29,Personal Travel,Business,900,5,5,4,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,disloyal Customer,25,Personal Travel,Eco,250,1,2,1,1,1,1,2,1,1,1,1,1,1,1,60,65
+Female,Loyal Customer,48,Business travel,Business,2200,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,disloyal Customer,33,Personal Travel,Eco,400,2,2,2,2,2,2,2,2,2,2,2,2,2,2,20,25
+Female,Loyal Customer,40,Business travel,Eco Plus,1300,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0
+Male,Loyal Customer,52,Business travel,Business,2800,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,disloyal Customer,26,Personal Travel,Eco,350,1,1,1,2,1,1,1,1,1,1,1,1,1,1,30,35
+Male,Loyal Customer,37,Business travel,Business,1600,5,4,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,44,Personal Travel,Eco Plus,1100,3,4,3,4,3,4,4,3,4,3,4,4,3,4,5,8
+Male,disloyal Customer,30,Personal Travel,Eco,500,2,2,2,2,2,2,2,2,2,2,2,2,2,2,15,18
+Female,Loyal Customer,36,Business travel,Business,1900,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0

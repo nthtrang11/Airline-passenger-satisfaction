@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+height: 100vh;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px;
+}
+
+.main-container {
+background-color: #ffffff;
+border-radius: 20px;
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+padding: 15px;
+max-width: 1800px;
+width: 100%;
+height: 96vh;
+animation: fadeIn 0.5s ease-in;
+display: flex;
+flex-direction: column;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.header {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color: white;
+padding: 12px 20px;
+border-radius: 12px;
+text-align: center;
+box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+margin-bottom: 12px;
+}
+
+.header h1 {
+font-weight: 700;
+font-size: 1.4rem;
+margin-bottom: 3px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header p {
+font-size: 0.8rem;
+opacity: 0.95;
+margin: 0;
+}
+
+/* Tabs */
+.nav-tabs {
+border-bottom: 2px solid #667eea;
+margin-bottom: 12px;
+}
+
+.nav-tabs .nav-link {
+color: #667eea;
+font-weight: 600;
+border: none;
+padding: 8px 20px;
+font-size: 0.9rem;
+}
+
+.nav-tabs .nav-link.active {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color: white;
+border-radius: 8px 8px 0 0;
+}
+
+.tab-content {
+flex: 1;
+overflow-y: auto;
+}
+
+.form-content {
+height: 100%;
+overflow-y: auto;
+padding-right: 5px;
+}
+
+.form-label {
+font-weight: 600;
+color: #2d3748;
+margin-bottom: 3px;
+font-size: 0.75rem;
+}
+
+.form-control,
+.form-select {
+border: 2px solid #e2e8f0;
+border-radius: 8px;
+padding: 4px 8px;
+background-color: #f8fafc;
+color: #1a202c;
+transition: all 0.3s ease;
+font-weight: 500;
+font-size: 0.8rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+border-color: #667eea;
+box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
+background-color: white;
+}
+
+.btn-predict {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+border: none;
+padding: 10px 30px;
+font-size: 0.95rem;
+font-weight: 700;
+border-radius: 50px;
+color: white;
+transition: all 0.3s ease;
+box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.btn-predict:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
+background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.section-title {
+color: #667eea;
+font-weight: 700;
+margin-bottom: 8px;
+padding-bottom: 6px;
+border-bottom: 2px solid #667eea;
+font-size: 0.9rem;
+}
+
+.result-box {
+margin-top: 10px;
+padding: 15px;
+border-radius: 12px;
+text-align: center;
+font-size: 1.2rem;
+font-weight: 700;
+animation: slideIn 0.5s ease-out;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideIn {
+from {
+opacity: 0;
+transform: scale(0.8);
+}
+
+to {
+opacity: 1;
+transform: scale(1);
+}
+}
+
+.result-satisfied {
+background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+color: white;
+}
+
+.result-dissatisfied {
+background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+color: white;
+}
+
+.card {
+border: none;
+border-radius: 12px;
+background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%);
+padding: 10px;
+margin-bottom: 0;
+box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+transition: all 0.3s ease;
+height: 100%;
+}
+
+.card:hover {
+transform: translateY(-2px);
+box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Star Rating Styles */
+.star-rating {
+display: flex;
+gap: 2px;
+margin-top: 3px;
+flex-direction: row-reverse;
+justify-content: flex-end;
+}
+
+.star-rating input {
+display: none;
+}
+
+.star-rating label {
+cursor: pointer;
+font-size: 1.1rem;
+color: #cbd5e0;
+transition: all 0.2s ease;
+}
+
+.star-rating label:hover,
+.star-rating label:hover~label,
+.star-rating input:checked~label {
+color: #fbbf24;
+}
+
+.mb-2 {
+margin-bottom: 0.4rem !important;
+}
+
+.bi-airplane-fill {
+font-size: 1.5rem;
+animation: fly 2s ease-in-out infinite;
+}
+
+@keyframes fly {
+
+0%,
+100% {
+transform: translateY(0px);
+}
+
+50% {
+transform: translateY(-5px);
+}
+}
+
+/* Compact row spacing */
+.row {
+margin-left: -4px;
+margin-right: -4px;
+}
+
+.row>* {
+padding-left: 4px;
+padding-right: 4px;
+}
+
+/* Custom scrollbar */
+.form-content::-webkit-scrollbar,
+.tab-content::-webkit-scrollbar {
+width: 6px;
+}
+
+.form-content::-webkit-scrollbar-track,
+.tab-content::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 10px;
+}
+
+.form-content::-webkit-scrollbar-thumb,
+.tab-content::-webkit-scrollbar-thumb {
+background: #667eea;
+border-radius: 10px;
+}
+
+/* Batch Analysis Styles */
+.upload-area {
+border: 3px dashed #667eea;
+border-radius: 15px;
+padding: 40px;
+text-align: center;
+cursor: pointer;
+transition: all 0.3s ease;
+background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%);
+}
+
+.upload-area:hover {
+background: linear-gradient(135deg, #e9ecef 0%, #f8fafc 100%);
+border-color: #764ba2;
+}
+
+.upload-area.dragover {
+background: rgba(102, 126, 234, 0.1);
+border-color: #764ba2;
+}
+
+.stats-card {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color: white;
+padding: 15px;
+border-radius: 12px;
+margin-bottom: 10px;
+text-align: center;
+}
+
+.stats-card h3 {
+font-size: 2rem;
+font-weight: 700;
+margin-bottom: 5px;
+}
+
+.stats-card p {
+font-size: 0.85rem;
+margin: 0;
+opacity: 0.9;
+}
+
+.results-table {
+font-size: 0.75rem;
+max-height: 400px;
+overflow-y: auto;
+}
+
+.results-table th {
+position: sticky;
+top: 0;
+background: #667eea;
+color: white;
+z-index: 10;
+}
+
+.badge-satisfied {
+background: #38ef7d;
+}
+
+.badge-dissatisfied {
+background: #ff6a00;
+}
+
+.services-container {
+max-height: calc(96vh - 200px);
+overflow-y: auto;
+}
+
+.services-container::-webkit-scrollbar {
+width: 5px;
+}
+
+.services-container::-webkit-scrollbar-track {
+background: transparent;
+}
+
+.services-container::-webkit-scrollbar-thumb {
+background: #cbd5e0;
+border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1><i class="bi bi-airplane-fill"></i> AIRLINE PASSENGER SATISFACTION PREDICTION</h1>
+            <p class="mb-0">Predict satisfaction for single passenger or analyze batch data</p>
+        </div>
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#single"><i class="bi bi-person"></i> Single
+                    Prediction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#batch"><i class="bi bi-file-earmark-spreadsheet"></i>
+                    Batch Analysis</a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Single Prediction Tab -->
+            <div id="single" class="tab-pane fade show active">
+                <div class="form-content">
+                    <form id="predictionForm">
+                        <div class="row">
+                            <!-- Passenger Information -->
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <h4 class="section-title"><i class="bi bi-person-fill"></i> Passenger Info</h4>
+
+                                    <div class="mb-2">
+                                        <label class="form-label">Gender</label>
+                                        <select class="form-select form-select-sm" id="gender" required>
+                                            {% for g in genders %}
+                                            <option value="{{ g }}">{{ g }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label class="form-label">Customer Type</label>
+                                        <select class="form-select form-select-sm" id="customerType" required>
+                                            {% for ct in customer_types %}
+                                            <option value="{{ ct }}">{{ ct }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label class="form-label">Age</label>
+                                        <input type="number" class="form-control form-control-sm" id="age" value="30"
+                                            min="0" max="120" required>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label class="form-label">Type of Travel</label>
+                                        <select class="form-select form-select-sm" id="travelType" required>
+                                            {% for tt in travel_types %}
+                                            <option value="{{ tt }}">{{ tt }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label class="form-label">Class</label>
+                                        <select class="form-select form-select-sm" id="class" required>
+                                            {% for c in classes %}
+                                            <option value="{{ c }}">{{ c }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label class="form-label">Flight Distance (km)</label>
+                                        <input type="number" class="form-control form-control-sm" id="distance"
+                                            value="500" min="0" required>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label class="form-label">Departure Delay (min)</label>
+                                        <input type="number" class="form-control form-control-sm" id="depDelay"
+                                            value="0" min="0" required>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label class="form-label">Arrival Delay (min)</label>
+                                        <input type="number" class="form-control form-control-sm" id="arrDelay"
+                                            value="0" min="0" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- In-flight Services Col 1 -->
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <h4 class="section-title"><i class="bi bi-star-fill"></i> Services (Part 1)</h4>
+                                    <div class="services-container">
+                                        <div class="mb-2">
+                                            <label class="form-label">Inflight Wifi</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="wifi" id="wifi5" value="5"><label
+                                                    for="wifi5">★</label>
+                                                <input type="radio" name="wifi" id="wifi4" value="4"><label
+                                                    for="wifi4">★</label>
+                                                <input type="radio" name="wifi" id="wifi3" value="3" checked><label
+                                                    for="wifi3">★</label>
+                                                <input type="radio" name="wifi" id="wifi2" value="2"><label
+                                                    for="wifi2">★</label>
+                                                <input type="radio" name="wifi" id="wifi1" value="1"><label
+                                                    for="wifi1">★</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label class="form-label">Time Convenient</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="timeConv" id="timeConv5" value="5"><label
+                                                    for="timeConv5">★</label>
+                                                <input type="radio" name="timeConv" id="timeConv4" value="4"><label
+                                                    for="timeConv4">★</label>
+                                                <input type="radio" name="timeConv" id="timeConv3" value="3"
+                                                    checked><label for="timeConv3">★</label>
+                                                <input type="radio" name="timeConv" id="timeConv2" value="2"><label
+                                                    for="timeConv2">★</label>
+                                                <input type="radio" name="timeConv" id="timeConv1" value="1"><label
+                                                    for="timeConv1">★</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label class="form-label">Online Booking</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="booking" id="booking5" value="5"><label
+                                                    for="booking5">★</label>
+                                                <input type="radio" name="booking" id="booking4" value="4"><label
+                                                    for="booking4">★</label>
+                                                <input type="radio" name="booking" id="booking3" value="3"
+                                                    checked><label for="booking3">★</label>
+                                                <input type="radio" name="booking" id="booking2" value="2"><label
+                                                    for="booking2">★</label>
+                                                <input type="radio" name="booking" id="booking1" value="1"><label
+                                                    for="booking1">★</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label class="form-label">Gate Location</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="gate" id="gate5" value="5"><label
+                                                    for="gate5">★</label>
+                                                <input type="radio" name="gate" id="gate4" value="4"><label
+                                                    for="gate4">★</label>
+                                                <input type="radio" name="gate" id="gate3" value="3" checked><label
+                                                    for="gate3">★</label>
+                                                <input type="radio" name="gate" id="gate2" value="2"><label
+                                                    for="gate2">★</label>
+                                                <input type="radio" name="gate" id="gate1" value="1"><label
+                                                    for="gate1">★</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label class="form-label">Food and Drink</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="food" id="food5" value="5"><label
+                                                    for="food5">★</label>
+                                                <input type="radio" name="food" id="food4" value="4"><label
+                                                    for="food4">★</label>
+                                                <input type="radio" name="food" id="food3" value="3" checked><label
+                                                    for="food3">★</label>
+                                                <input type="radio" name="food" id="food2" value="2"><label
+                                                    for="food2">★</label>
+                                                <input type="radio" name="food" id="food1" value="1"><label
+                                                    for="food1">★</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label class="form-label">Online Boarding</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="boarding" id="boarding5" value="5"><label
+                                                    for="boarding5">★</label>
+                                                <input type="radio" name="boarding" id="boarding4" value="4"><label
+                                                    for="boarding4">★</label>
+                                                <input type="radio" name="boarding" id="boarding3" value="3"
+                                                    checked><label for="boarding3">★</label>
+                                                <input type="radio" name="boarding" id="boarding2" value="2"><label
+                                                    for="boarding2">★</label>
+                                                <input type="radio" name="boarding" id="boarding1" value="1"><label
+                                                    for="boarding1">★</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label class="form-label">Seat Comfort</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="seat" id="seat5" value="5"><label
+                                                    for="seat5">★</label>
+                                                <input type="radio" name="seat" id="seat4" value="4"><label
+                                                    for="seat4">★</label>
+                                                <input type="radio" name="seat" id="seat3" value="3" checked><label
+                                                    for="seat3">★</label>
+                                                <input type="radio" name="seat" id="seat2" value="2"><label
+                                                    for="seat2">★</label>
+                                                <input type="radio" name="seat" id="seat1" value="1"><label
+                                                    for="seat1">★</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- In-flight Services Col 2 -->
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <h4 class="section-title"><i class="bi bi-star-fill"></i> Services (Part 2)</h4>
+                                    <div class="services-container">
+                                        <div class="mb-2">
+                                            <label class="form-label">Entertainment</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="entertainment" id="entertainment5"
+                                                    value="5"><label for="entertainment5">★</label>
+                                                <input type="radio" name="entertainment" id="entertainment4"
+                                                    value="4"><label for="entertainment4">★</label>
+                                                <input type="radio" name="entertainment" id="entertainment3" value="3"
+                                                    checked><label for="entertainment3">★</label>
+                                                <input type="radio" name="entertainment" id="entertainment2"
+                                                    value="2"><label for="entertainment2">★</label>
+                                                <input type="radio" name="entertainment" id="entertainment1"
+                                                    value="1"><label for="entertainment1">★</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label class="form-label">On-board Service</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="onboard" id="onboard5" value="5"><label
+                                                    for="onboard5">★</label>
+                                                <input type="radio" name="onboard" id="onboard4" value="4"><label
+                                                    for="onboard4">★</label>
+                                                <input type="radio" name="onboard" id="onboard3" value="3"
+                                                    checked><label for="onboard3">★</label>
+                                                <input type="radio" name="onboard" id="onboard2" value="2"><label
+                                                    for="onboard2">★</label>
+                                                <input type="radio" name="onboard" id="onboard1" value="1"><label
+                                                    for="onboard1">★</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label class="form-label">Leg Room Service</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="legroom" id="legroom5" value="5"><label
+                                                    for="legroom5">★</label>
+                                                <input type="radio" name="legroom" id="legroom4" value="4"><label
+                                                    for="legroom4">★</label>
+                                                <input type="radio" name="legroom" id="legroom3" value="3"
+                                                    checked><label for="legroom3">★</label>
+                                                <input type="radio" name="legroom" id="legroom2" value="2"><label
+                                                    for="legroom2">★</label>
+                                                <input type="radio" name="legroom" id="legroom1" value="1"><label
+                                                    for="legroom1">★</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label class="form-label">Baggage Handling</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="baggage" id="baggage5" value="5"><label
+                                                    for="baggage5">★</label>
+                                                <input type="radio" name="baggage" id="baggage4" value="4"><label
+                                                    for="baggage4">★</label>
+                                                <input type="radio" name="baggage" id="baggage3" value="3"
+                                                    checked><label for="baggage3">★</label>
+                                                <input type="radio" name="baggage" id="baggage2" value="2"><label
+                                                    for="baggage2">★</label>
+                                                <input type="radio" name="baggage" id="baggage1" value="1"><label
+                                                    for="baggage1">★</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label class="form-label">Check-in Service</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="checkin" id="checkin5" value="5"><label
+                                                    for="checkin5">★</label>
+                                                <input type="radio" name="checkin" id="checkin4" value="4"><label
+                                                    for="checkin4">★</label>
+                                                <input type="radio" name="checkin" id="checkin3" value="3"
+                                                    checked><label for="checkin3">★</label>
+                                                <input type="radio" name="checkin" id="checkin2" value="2"><label
+                                                    for="checkin2">★</label>
+                                                <input type="radio" name="checkin" id="checkin1" value="1"><label
+                                                    for="checkin1">★</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label class="form-label">Inflight Service</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="service" id="service5" value="5"><label
+                                                    for="service5">★</label>
+                                                <input type="radio" name="service" id="service4" value="4"><label
+                                                    for="service4">★</label>
+                                                <input type="radio" name="service" id="service3" value="3"
+                                                    checked><label for="service3">★</label>
+                                                <input type="radio" name="service" id="service2" value="2"><label
+                                                    for="service2">★</label>
+                                                <input type="radio" name="service" id="service1" value="1"><label
+                                                    for="service1">★</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2">
+                                            <label class="form-label">Cleanliness</label>
+                                            <div class="star-rating">
+                                                <input type="radio" name="cleanliness" id="cleanliness5"
+                                                    value="5"><label for="cleanliness5">★</label>
+                                                <input type="radio" name="cleanliness" id="cleanliness4"
+                                                    value="4"><label for="cleanliness4">★</label>
+                                                <input type="radio" name="cleanliness" id="cleanliness3" value="3"
+                                                    checked><label for="cleanliness3">★</label>
+                                                <input type="radio" name="cleanliness" id="cleanliness2"
+                                                    value="2"><label for="cleanliness2">★</label>
+                                                <input type="radio" name="cleanliness" id="cleanliness1"
+                                                    value="1"><label for="cleanliness1">★</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-2">
+                            <button type="submit" class="btn btn-predict">
+                                <i class="bi bi-search"></i> PREDICT
+                            </button>
+                        </div>
+
+                        <div id="result"></div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Batch Analysis Tab -->
+            <div id="batch" class="tab-pane fade">
+                <div class="row h-100">
+                    <div class="col-md-4">
+                        <div class="upload-area" id="uploadArea">
+                            <i class="bi bi-cloud-upload" style="font-size: 3rem; color: #667eea;"></i>
+                            <h4 class="mt-3">Upload CSV File</h4>
+                            <p>Drag & drop or click to select</p>
+                            <input type="file" id="csvFile" accept=".csv" style="display: none;">
+                            <button type="button" class="btn btn-predict mt-2"
+                                onclick="document.getElementById('csvFile').click()">
+                                <i class="bi bi-folder2-open"></i> Browse Files
+                            </button>
+                            <p class="mt-3" style="font-size: 0.75rem; color: #666;">
+                                <strong>Required columns:</strong> Gender, Customer Type, Age, Type of Travel, Class,
+                                Flight Distance, Services (14 ratings 1-5), Delays
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div id="batchResults" style="display: none;">
+                            <h4 class="section-title"><i class="bi bi-bar-chart"></i> Analysis Results</h4>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="stats-card"
+                                        style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                                        <h3 id="satisfiedCount">0</h3>
+                                        <p>SATISFIED (<span id="satisfiedPct">0</span>%)</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="stats-card"
+                                        style="background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);">
+                                        <h3 id="dissatisfiedCount">0</h3>
+                                        <p>DISSATISFIED (<span id="dissatisfiedPct">0</span>%)</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="stats-card">
+                                        <h3 id="totalCount">0</h3>
+                                        <p>TOTAL RECORDS</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-3">
+                                <h5 style="color: #667eea; font-weight: 600;">Preview (First 100 records)</h5>
+                                <div class="table-responsive results-table">
+                                    <table class="table table-sm table-striped" id="resultsTable">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Gender</th>
+                                                <th>Age</th>
+                                                <th>Type</th>
+                                                <th>Class</th>
+                                                <th>Distance</th>
+                                                <th>Prediction</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="resultsBody">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="batchError" class="alert alert-danger" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Single Prediction
+        function getRadioValue(name) {
+            const radio = document.querySelector(`input[name="${name}"]:checked`);
+            return radio ? radio.value : '3';
+        }
+
+        document.getElementById('predictionForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = {
+                gender: document.getElementById('gender').value,
+                customerType: document.getElementById('customerType').value,
+                age: document.getElementById('age').value,
+                travelType: document.getElementById('travelType').value,
+                class: document.getElementById('class').value,
+                distance: document.getElementById('distance').value,
+                wifi: getRadioValue('wifi'),
+                timeConv: getRadioValue('timeConv'),
+                booking: getRadioValue('booking'),
+                gate: getRadioValue('gate'),
+                food: getRadioValue('food'),
+                boarding: getRadioValue('boarding'),
+                seat: getRadioValue('seat'),
+                entertainment: getRadioValue('entertainment'),
+                onboard: getRadioValue('onboard'),
+                legroom: getRadioValue('legroom'),
+                baggage: getRadioValue('baggage'),
+                checkin: getRadioValue('checkin'),
+                service: getRadioValue('service'),
+                cleanliness: getRadioValue('cleanliness'),
+                depDelay: document.getElementById('depDelay').value,
+                arrDelay: document.getElementById('arrDelay').value
+            };
+
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                const resultDiv = document.getElementById('result');
+
+                if (result.success) {
+                    if (result.satisfied) {
+                        resultDiv.innerHTML = `
+                            <div class="result-box result-satisfied">
+                                <i class="bi bi-emoji-smile-fill"></i> PASSENGER SATISFIED!
+                            </div>
+                        `;
+                    } else {
+                        resultDiv.innerHTML = `
+                            <div class="result-box result-dissatisfied">
+                                <i class="bi bi-emoji-frown-fill"></i> PASSENGER DISSATISFIED
+                            </div>
+                        `;
+                    }
+                } else {
+                    resultDiv.innerHTML = `
+                        <div class="alert alert-danger mt-3">
+                            Error: ${result.error}
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                document.getElementById('result').innerHTML = `
+                    <div class="alert alert-danger mt-3">
+                        Connection Error: ${error.message}
+                    </div>
+                `;
+            }
+        });
+
+        // Batch Analysis
+        const uploadArea = document.getElementById('uploadArea');
+        const csvFile = document.getElementById('csvFile');
+        const batchResults = document.getElementById('batchResults');
+        const batchError = document.getElementById('batchError');
+
+        // Drag & Drop
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFileUpload(files[0]);
+            }
+        });
+
+        csvFile.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFileUpload(e.target.files[0]);
+            }
+        });
+
+        async function handleFileUpload(file) {
+            if (!file.name.endsWith('.csv')) {
+                showError('Please upload a CSV file');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('/predict_batch', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    displayResults(result);
+                } else {
+                    showError(result.error);
+                }
+            } catch (error) {
+                showError('Connection error: ' + error.message);
+            }
+        }
+
+        function displayResults(data) {
+            batchError.style.display = 'none';
+            batchResults.style.display = 'block';
+
+            // Update stats
+            document.getElementById('totalCount').textContent = data.total;
+            document.getElementById('satisfiedCount').textContent = data.satisfied;
+            document.getElementById('dissatisfiedCount').textContent = data.dissatisfied;
+            document.getElementById('satisfiedPct').textContent = data.satisfied_percentage;
+            document.getElementById('dissatisfiedPct').textContent = data.dissatisfied_percentage;
+
+            // Update table
+            const tbody = document.getElementById('resultsBody');
+            tbody.innerHTML = '';
+
+            data.results.forEach((row, idx) => {
+                const tr = document.createElement('tr');
+                const predClass = row.Prediction === 'satisfied' ? 'badge-satisfied' : 'badge-dissatisfied';
+                const predText = row.Prediction === 'satisfied' ? 'SATISFIED' : 'DISSATISFIED';
+
+                tr.innerHTML = `
+                    <td>${idx + 1}</td>
+                    <td>${row.Gender || ''}</td>
+                    <td>${row.Age || ''}</td>
+                    <td>${row['Type of Travel'] || ''}</td>
+                    <td>${row.Class || ''}</td>
+                    <td>${row['Flight Distance'] || ''}</td>
+                    <td><span class="badge ${predClass}">${predText}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function showError(message) {
+            batchResults.style.display = 'none';
+            batchError.style.display = 'block';
+            batchError.textContent = message;
+        }
+    </script>
+</body>
+
+</html>

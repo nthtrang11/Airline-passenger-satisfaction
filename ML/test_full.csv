@@ -1,0 +1,98 @@
+Gender,Customer Type,Age,Type of Travel,Class,Flight Distance,Inflight wifi service,Departure/Arrival time convenient,Ease of Online booking,Gate location,Food and drink,Online boarding,Seat comfort,Inflight entertainment,On-board service,Leg room service,Baggage handling,Checkin service,Inflight service,Cleanliness,Departure Delay in Minutes,Arrival Delay in Minutes
+Male,Loyal Customer,35,Business travel,Business,1200,5,5,5,4,5,5,5,5,5,4,5,5,5,5,0,0
+Female,disloyal Customer,28,Personal Travel,Eco,450,2,2,2,2,2,2,2,1,2,2,2,2,2,2,15,20
+Male,Loyal Customer,42,Business travel,Business,2500,4,5,4,5,4,5,5,4,5,5,4,5,5,4,0,0
+Female,Loyal Customer,55,Personal Travel,Eco Plus,800,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,7
+Male,disloyal Customer,22,Personal Travel,Eco,300,1,1,2,1,1,1,2,1,1,1,2,1,1,1,45,50
+Female,Loyal Customer,38,Business travel,Business,1800,5,4,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,50,Business travel,Business,3000,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,disloyal Customer,31,Personal Travel,Eco,600,2,3,2,2,2,2,3,2,2,2,2,2,2,2,10,12
+Male,Loyal Customer,45,Business travel,Eco Plus,1500,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0
+Female,Loyal Customer,29,Personal Travel,Business,900,5,5,4,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,disloyal Customer,25,Personal Travel,Eco,250,1,2,1,1,1,1,2,1,1,1,1,1,1,1,60,65
+Female,Loyal Customer,48,Business travel,Business,2200,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,disloyal Customer,33,Personal Travel,Eco,400,2,2,2,2,2,2,2,2,2,2,2,2,2,2,20,25
+Female,Loyal Customer,40,Business travel,Eco Plus,1300,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0
+Male,Loyal Customer,52,Business travel,Business,2800,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,disloyal Customer,26,Personal Travel,Eco,350,1,1,1,2,1,1,1,1,1,1,1,1,1,1,30,35
+Male,Loyal Customer,37,Business travel,Business,1600,5,4,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,44,Personal Travel,Eco Plus,1100,3,4,3,4,3,4,4,3,4,3,4,4,3,4,5,8
+Male,disloyal Customer,30,Personal Travel,Eco,500,2,2,2,2,2,2,2,2,2,2,2,2,2,2,15,18
+Female,Loyal Customer,36,Business travel,Business,1900,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,60,Business travel,Eco Plus,2100,4,5,4,4,5,4,5,4,5,4,5,5,4,5,0,0
+Female,disloyal Customer,24,Personal Travel,Eco,280,1,1,1,1,2,1,1,1,1,2,1,1,1,1,50,55
+Male,Loyal Customer,47,Business travel,Business,2700,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,32,Personal Travel,Eco Plus,950,3,3,4,3,3,4,3,4,3,3,4,3,4,3,8,10
+Male,disloyal Customer,27,Personal Travel,Eco,420,2,2,2,2,2,2,2,2,2,2,2,2,2,2,18,22
+Female,Loyal Customer,41,Business travel,Business,1750,5,4,5,5,4,5,5,5,4,5,5,5,5,5,0,0
+Male,Loyal Customer,54,Business travel,Eco Plus,1450,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,5
+Female,disloyal Customer,23,Personal Travel,Eco,320,1,2,1,1,1,2,1,1,2,1,1,1,2,1,40,45
+Male,Loyal Customer,39,Business travel,Business,2000,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,46,Personal Travel,Eco Plus,1250,4,3,4,4,3,4,4,4,3,4,4,4,3,4,6,9
+Male,disloyal Customer,29,Personal Travel,Eco,380,2,2,2,2,2,2,2,2,2,2,2,2,2,2,25,28
+Female,Loyal Customer,43,Business travel,Business,1850,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,56,Business travel,Business,2600,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,disloyal Customer,21,Personal Travel,Eco,290,1,1,1,1,1,1,1,1,1,1,1,1,1,1,55,60
+Male,Loyal Customer,49,Business travel,Eco Plus,1650,4,4,5,4,4,5,4,5,4,4,5,4,5,4,2,4
+Female,Loyal Customer,34,Personal Travel,Business,1050,5,5,4,5,5,4,5,5,5,4,5,5,4,5,0,0
+Male,disloyal Customer,26,Personal Travel,Eco,340,2,2,2,2,2,2,2,2,2,2,2,2,2,2,22,26
+Female,Loyal Customer,51,Business travel,Business,2300,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,58,Business travel,Eco Plus,1550,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,6
+Female,disloyal Customer,20,Personal Travel,Eco,270,1,1,1,2,1,1,1,1,1,2,1,1,1,1,48,52
+Male,Loyal Customer,44,Business travel,Business,2100,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,30,Personal Travel,Eco Plus,850,3,3,3,4,3,3,4,3,3,4,3,3,4,3,7,11
+Male,disloyal Customer,28,Personal Travel,Eco,460,2,2,2,2,2,2,2,2,2,2,2,2,2,2,16,19
+Female,Loyal Customer,53,Business travel,Business,2400,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,62,Business travel,Eco Plus,1700,4,5,4,4,5,4,5,4,5,4,5,5,4,5,1,3
+Female,disloyal Customer,19,Personal Travel,Eco,240,1,1,1,1,1,1,1,1,1,1,1,1,1,1,58,62
+Male,Loyal Customer,46,Business travel,Business,2250,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,33,Personal Travel,Eco Plus,920,3,4,3,3,4,3,4,3,4,3,4,3,4,3,9,12
+Male,disloyal Customer,24,Personal Travel,Eco,310,2,2,1,2,2,1,2,1,2,1,2,2,1,2,35,38
+Female,Loyal Customer,57,Business travel,Business,2650,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,41,Business travel,Eco Plus,1400,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,7
+Female,disloyal Customer,22,Personal Travel,Eco,360,1,2,1,1,1,2,1,1,2,1,1,1,2,1,42,47
+Male,Loyal Customer,48,Business travel,Business,1950,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,35,Personal Travel,Eco Plus,1000,3,3,3,3,3,3,3,3,3,3,3,3,3,3,10,14
+Male,disloyal Customer,31,Personal Travel,Eco,440,2,2,2,2,2,2,2,2,2,2,2,2,2,2,19,23
+Female,Loyal Customer,59,Business travel,Business,2550,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,40,Business travel,Eco Plus,1600,4,4,4,5,4,4,5,4,4,5,4,4,5,4,3,6
+Female,disloyal Customer,18,Personal Travel,Eco,220,1,1,1,1,1,1,1,1,1,1,1,1,1,1,65,70
+Male,Loyal Customer,55,Business travel,Business,2450,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,37,Personal Travel,Eco Plus,880,3,3,4,3,3,4,3,4,3,3,4,3,4,3,11,15
+Male,disloyal Customer,25,Personal Travel,Eco,390,2,2,2,2,2,2,2,2,2,2,2,2,2,2,28,32
+Female,Loyal Customer,45,Business travel,Business,2050,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,61,Business travel,Eco Plus,1750,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,5
+Female,disloyal Customer,23,Personal Travel,Eco,330,1,1,2,1,1,2,1,2,1,1,2,1,2,1,38,43
+Male,Loyal Customer,50,Business travel,Business,2350,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,31,Personal Travel,Eco Plus,970,3,4,3,4,3,4,3,4,3,4,3,4,3,4,8,13
+Male,disloyal Customer,27,Personal Travel,Eco,410,2,2,2,2,2,2,2,2,2,2,2,2,2,2,21,24
+Female,Loyal Customer,42,Business travel,Business,1880,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,47,Business travel,Eco Plus,1350,4,4,4,4,4,4,4,4,4,4,4,4,4,4,6,8
+Female,disloyal Customer,20,Personal Travel,Eco,260,1,1,1,1,1,1,1,1,1,1,1,1,1,1,52,57
+Male,Loyal Customer,52,Business travel,Business,2200,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,36,Personal Travel,Eco Plus,940,3,3,3,4,3,3,4,3,3,4,3,3,4,3,12,16
+Male,disloyal Customer,29,Personal Travel,Eco,370,2,2,2,2,2,2,2,2,2,2,2,2,2,2,24,27
+Female,Loyal Customer,49,Business travel,Business,2150,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,63,Business travel,Eco Plus,1800,4,5,4,5,4,5,4,5,4,5,4,5,4,5,1,4
+Female,disloyal Customer,21,Personal Travel,Eco,300,1,1,1,1,2,1,1,1,2,1,1,1,1,1,46,51
+Male,Loyal Customer,43,Business travel,Business,1980,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,32,Personal Travel,Eco Plus,1020,3,4,3,3,4,3,4,3,4,3,4,3,4,3,9,14
+Male,disloyal Customer,26,Personal Travel,Eco,350,2,2,2,2,2,2,2,2,2,2,2,2,2,2,30,34
+Female,Loyal Customer,54,Business travel,Business,2500,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,39,Business travel,Eco Plus,1500,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,7
+Female,disloyal Customer,19,Personal Travel,Eco,230,1,1,1,1,1,1,1,1,1,1,1,1,1,1,60,64
+Male,Loyal Customer,51,Business travel,Business,2300,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,34,Personal Travel,Eco Plus,960,3,3,4,3,3,4,3,4,3,3,4,3,4,3,10,15
+Male,disloyal Customer,28,Personal Travel,Eco,420,2,2,2,2,2,2,2,2,2,2,2,2,2,2,17,21
+Female,Loyal Customer,56,Business travel,Business,2600,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,64,Business travel,Eco Plus,1900,4,4,5,4,4,5,4,5,4,4,5,4,5,4,2,6
+Female,disloyal Customer,18,Personal Travel,Eco,210,1,1,1,1,1,1,1,1,1,1,1,1,1,1,68,72
+Male,Loyal Customer,44,Business travel,Business,2080,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,38,Personal Travel,Eco Plus,1080,3,4,3,4,3,4,3,4,3,4,3,4,3,4,7,12
+Male,disloyal Customer,24,Personal Travel,Eco,280,2,2,1,2,2,1,2,1,2,1,2,2,1,2,33,36
+Female,Loyal Customer,58,Business travel,Business,2700,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Male,Loyal Customer,42,Business travel,Eco Plus,1420,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,9
+Female,disloyal Customer,22,Personal Travel,Eco,340,1,2,1,1,1,2,1,1,2,1,1,1,2,1,44,49
+Male,Loyal Customer,53,Business travel,Business,2400,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0
+Female,Loyal Customer,33,Personal Travel,Eco Plus,900,3,3,3,3,3,3,3,3,3,3,3,3,3,3,13,17
+Male,disloyal Customer,30,Personal Travel,Eco,480,2,2,2,2,2,2,2,2,2,2,2,2,2,2,14,18
